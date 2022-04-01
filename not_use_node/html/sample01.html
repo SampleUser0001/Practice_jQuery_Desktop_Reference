@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Sample01</title>
+        <script type="module" src="./js/jquery.js" ></script>
+        <script type="module">
+            const divs = $("div")
+            let output = `divs.length : ${divs.length} \r\n`
+            output += `divs.text() : ${divs.text()} \r\n`
+            // for(const i in divs)はNG。
+            for (let i=0 ; i < divs.length ; i++) {
+                output += `divs[${i}].outerText : ${divs[i].outerText} \r\n`
+            }
+            $("textarea").text(output)
+            console.log(divs)
+        </script>
+    </head>
+    <body>
+        <div id="hoge">Hoge</div>
+        <div id="piyo">Piyo</div>
+
+        <textarea name="output" rows="20" cols="100"></textarea>
+    </body>
+</html>
