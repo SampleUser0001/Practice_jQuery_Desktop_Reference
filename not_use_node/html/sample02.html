@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Sample02</title>
+        <script type="module" src="./js/jquery.js" ></script>
+        <script type="module" language="javascript">
+            $("#btn").on('click', () => {
+                $("p.more").css("background-color", "gray").show("fast")
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <p id="hoge" class="less">Hoge</p>
+            <p id="piyo" class="more" hidden>Piyo</p>
+            <input id="btn" type="button" value="click" onclick="hoge()" />
+        </div>
+    </body>
+</html>
